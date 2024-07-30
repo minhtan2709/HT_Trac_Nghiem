@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/home.css" />
+
+    <link rel="icon" type="image/png" href="Picture/icon-tab.png" />
+
+    <title>THI TRẮC NGHIỆM</title>
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <img
+        src="/Menu/Picture/UTH_logo.png"
+        alt=""
+        style="height: 70px; width: 400px; "
+      />
+
+      <!-- Menu Bar -->
+      <input type="checkbox" id="nav_check" hidden />
+      <nav>
+        <ul>
+          <li>
+            <a href="" class="active">Trang chủ</a>
+          </li>
+          <li>
+            <a href="introduce.html" id="intro-link">Sơ lược về web</a>
+            <script src="js/introduce.js"></script>
+          </li>
+          <li>
+            <a href="about.html" id="about-link">Thành viên nhóm</a>
+            <script src="js/hidehome.js"></script>
+            <script src="js/about.js"></script>
+          </li>
+        </ul>
+      </nav>
+
+      <label for="nav_check" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
+    </header>
+    <!-- thẻ about -->
+    <div id="content"></div>
+
+    <!-- Button -->
+    <div class="contents">
+      <h1 style="color: #000">WEBSITE THI TRẮC NGHIỆM</h1>
+      <div>
+        <a href="http://localhost:3000/online-quiz/login.php">
+          <button type="button"><span></span>ĐĂNG NHẬP</button>
+        </a>
+
+        <a href="http://localhost:3000/online-quiz/register.php">
+          <button type="button"><span></span>ĐĂNG KÍ</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+.button-text {
+  color: #fff;
+  font-weight: bold;
+}
+button {
+  border-radius: 5px;
+  float: right;
+  margin-bottom: 7px;
+  background-color: #059862;
+  height: 45px;
+  width: 170px;
+}
+button:hover {
+  cursor: pointer;
+  /* màu background mờ đi khi chạm vào */
+  opacity: 0.8;
+}
+li:hover,
+li.active {
+  background-color: #059862;
+  transition: all 0.2s linear;
+}

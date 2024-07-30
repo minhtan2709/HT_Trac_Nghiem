@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "futura md bt";
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background-image: url(/Menu/Picture/wallpaperflare.com_wallpaper.jpg); */
+  background-size: cover;
+}
+
+/* làm mờ background của body */
+body::before,
+.contents::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+body::after,
+.contents::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(/Menu/Picture/wallpaperflare.com_wallpaper.jpg) no-repeat
+    center center fixed;
+  background-size: cover;
+  z-index: -2;
+}
+
+/*  */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/Menu/Picture/wallpaperflare.com_wallpaper.jpg);
+  background-size: cover;
+
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li a {
+  display: inline-block;
+  color: white;
+  padding: 5px 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+/* gạch chân trắng */
+header nav ul li a:hover,
+header nav ul li a.active {
+  border-bottom-color: #fff;
+}
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background: #009688;
+}
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .hamburger {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    top: 70px;
+    width: 100%;
+    background: #009688;
+    padding: 30px;
+    transition: 0.3s;
+  }
+  header #nav_check:checked ~ nav {
+    left: 0;
+  }
+  header nav ul {
+    display: block;
+  }
+  header nav ul li a {
+    margin: 5px 0;
+  }
+}
+
+/* Button */
+
+.contents {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+}
+
+.contents h1 {
+  font-size: 70px;
+  margin-top: 80px;
+}
+
+.contents h2 {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  color: white;
+}
+
+span {
+  background: #000;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
+}
